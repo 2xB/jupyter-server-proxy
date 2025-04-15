@@ -9,8 +9,6 @@ import inspect
 from jupyter_server.utils import ensure_async
 from tornado import httpclient, httputil, websocket
 
-# Test!
-
 
 class PingableWSClientConnection(websocket.WebSocketClientConnection):
     """A WebSocketClientConnection with an on_ping callback."""
