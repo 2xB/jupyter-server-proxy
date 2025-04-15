@@ -64,7 +64,7 @@ class RawSocketHandler(NamedLocalProxyHandler):
             raise web.HTTPError(
                 405, "this raw_socket_proxy backend only supports websocket connections"
             )
-        return super().proxy(port, path)
+        return await super().proxy(port, path)
 
     async def proxy_open(self, host, port, proxied_path=""):
         """
